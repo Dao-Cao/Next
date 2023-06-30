@@ -4,7 +4,15 @@
  * 2023-06-27
  */
 "use client";
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 export default function Login() {
+
+  const router = useRouter()
+  // console.log(router.query)
+  // useEffect(()=>{
+  //   console.log(router.query)
+  // },[router])
     return (
       <>
         {/*
@@ -79,8 +87,9 @@ export default function Login() {
   
               <div>
                 <button
-                  type="submit"
+                  type="button"
                   className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  onClick={()=>router.push('/main')}
                 >
                   Login
                 </button>

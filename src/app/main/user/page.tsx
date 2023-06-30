@@ -1,8 +1,7 @@
-import Login from "@/app/components/Login";
+"use client"
+import { useRouter } from 'next/navigation'
+ 
 export default function User() {
-  return (
-    <>
-      <div className="flex"></div>
-    </>
-  );
+  const router = useRouter()
+  return <p>Post: {router.query}</p>
 }
